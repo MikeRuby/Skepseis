@@ -1,0 +1,3 @@
+= Sképseis
+
+Sképseis is a small showcase and blog app for developers and designers written in Rails.
