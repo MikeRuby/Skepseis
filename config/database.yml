@@ -1,32 +1,40 @@
-dbinfo: &dbinfo
-    adapter: mysql
-    encoding: utf8
-    host: localhost
-    username: root
-    password:
-
-development:
-    database: skepseis_development
-    <<: *dbinfo
-
-test:
-    database: skepseis_test
-    <<: *dbinfo
-
-# Production and Staging will be on Heroku
-
 prod_dbinfo: &prod_dbinfo
     adapter: postgresql
     encoding: unicode
     pool: 5
-    username: postgres
+    username: mikeruby
     password:
 
+development:
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: mikeruby
+    password:
+    database: skepseis_development
+    
+test:
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: mikeruby
+    password:
+    database: skepseis_test
+
 staging:
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: mikeruby
+    password:
     database: skepseis_staging
-    <<: *prod_dbinfo
 
 production:
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: mikeruby
+    password:
     database: skepseis_production
-    <<: *prod_dbinfo
+
 
