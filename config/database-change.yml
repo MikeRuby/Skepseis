@@ -1,10 +1,3 @@
-prod_dbinfo: &prod_dbinfo
-    adapter: postgresql
-    encoding: unicode
-    pool: 5
-    username: myusername
-    password:
-
 development:
     adapter: postgresql
     encoding: unicode
